@@ -27,16 +27,11 @@ In [Firebase Console → Firestore → Rules](https://console.firebase.google.co
 
 1. Push this repo to GitHub.
 2. **Settings → Pages → Source → GitHub Actions**.
-3. **Settings → Secrets and variables → Actions** — add:
+3. **Settings → Secrets and variables → Actions** — add **one** secret:
 
-   - `NEXT_PUBLIC_FIREBASE_API_KEY`
-   - `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
-   - `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
-   - `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
-   - `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
-   - `NEXT_PUBLIC_FIREBASE_APP_ID`
-   - `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`
+   - **Name:** `INVITE_ENV`
+   - **Value:** the `NEXT_PUBLIC_*` lines from `.env.local` (Firebase + Cloudinary cloud name only)
 
 4. Push to `main`. Site URL: `https://<user>.github.io/<repo>/`
 
-Do **not** add `CLOUDINARY_API_SECRET` as a GitHub secret.
+Do **not** put `CLOUDINARY_API_KEY` or `CLOUDINARY_API_SECRET` in that secret.
