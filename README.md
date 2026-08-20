@@ -21,7 +21,7 @@ Copy `.env.example` to `.env.local` and fill Firebase + Cloudinary values.
 
 ## Firestore rules
 
-In [Firebase Console → Firestore → Rules](https://console.firebase.google.com/project/weeding-eebf4/firestore/rules), paste [`firestore.rules`](firestore.rules) and publish. Until then, test mode will still accept writes.
+In [Firebase Console → Firestore → Rules](https://console.firebase.google.com/project/weeding-eebf4/firestore/rules), paste [`firestore.rules`](firestore.rules) and publish. Until then, RSVP/ucapan writes will fail. Re-publish whenever `firestore.rules` changes (e.g. full RSVP detail fields).
 
 ## GitHub Pages
 

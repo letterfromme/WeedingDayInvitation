@@ -13,8 +13,10 @@ import { getDb } from "./firebase";
 export type Attendance = {
   id: string;
   name: string;
+  phone?: string;
   attending: boolean;
   pax: number;
+  notes?: string;
   createdAt?: { seconds: number } | null;
 };
 
@@ -45,8 +47,10 @@ export async function submitRsvp(input: {
   await setDoc(rsvpRef, payload);
   await setDoc(doc(db, "attendancePublic", rsvpRef.id), {
     name: payload.name,
+    phone: payload.phone,
     attending: payload.attending,
     pax: payload.pax,
+    notes: payload.notes,
     createdAt: serverTimestamp(),
   });
 }
@@ -87,4 +91,12 @@ export function listenWishes(cb: (rows: Wish[]) => void) {
       })),
     );
   });
+}
+
+export function formatRsvpDate(createdAt?: { seconds: number } | null) {
+  if (!createdAt?.seconds) return null;
+  return new Intl.DateTimeFormat("ms-MY", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(createdAt.seconds * 1000));
 }
