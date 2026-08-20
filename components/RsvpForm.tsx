@@ -74,11 +74,15 @@ export function RsvpForm() {
       <Field label="Nombor telefon">
         <input
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 15))}
           required
-          inputMode="tel"
+          type="tel"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          autoComplete="tel"
+          maxLength={15}
           className="field"
-          placeholder="01x-xxxxxxx"
+          placeholder="01xxxxxxxx"
         />
       </Field>
       <Field label="Kehadiran">
