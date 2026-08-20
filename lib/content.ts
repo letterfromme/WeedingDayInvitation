@@ -1,5 +1,6 @@
 export const event = {
   title: "MAJLIS PERKHAWINAN",
+  tagline: "SyitheonefrKhalib",
   coupleShort: { bride: "Asyikin", groom: "Khalib" },
   coupleFull: {
     bride: "CHE ZAMIERA ASYIKIN BIN CHE ZAAZANY",
@@ -7,6 +8,7 @@ export const event = {
   },
   hosts: [
     { father: "CHE ZAAZANY BIN CHE YAHYA", mother: "SURIATI BINTI CHE SU" },
+    { father: "CHE HUSAIN B. MUSA(WOK)", mother: "MEKDAH BINTI IBRAHIM" },
   ],
   date: {
     iso: "2026-10-17",
@@ -38,7 +40,8 @@ export const event = {
     { name: "Yati", phone: "60139468506" },
   ],
   copy: {
-    greeting: "Assalamualaikum & salam sejahtera",
+    greeting: "Assalamualaikum & salam sejahtera, kami",
+    bersama: "Bersama",
     inviteMs:
       "Dengan segala hormatnya kami menjemput Dato’/Datin, Tuan/Puan, Encik/Cik ke majlis walimatulurus puteri dan putera kami.",
     inviteEn:

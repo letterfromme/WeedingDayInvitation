@@ -117,6 +117,9 @@ export function Cover({
         <p className="font-display mt-4 text-[11px] tracking-[0.28em] text-[var(--ink)]/75">
           {event.date.displayMs}
         </p>
+        <p className="mt-2 font-display text-[10px] tracking-[0.2em] text-[var(--gold)]">
+          #{event.tagline}
+        </p>
 
         {to ? (
           <p className="font-script mt-3 text-[1.65rem] leading-tight text-[var(--burgundy)]">

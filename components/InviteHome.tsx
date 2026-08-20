@@ -92,6 +92,9 @@ export function InviteHome() {
                 <span>12 PM</span>
               </div>
               <div className="gold-line mt-3" />
+              <p className="mt-3 font-display text-[9px] tracking-[0.18em] text-[var(--gold)]">
+                #{event.tagline}
+              </p>
             </div>
           </motion.div>
         </FloralFrame>
@@ -119,15 +122,22 @@ export function InviteHome() {
               Ya {to}, kami menjemput anda ke majlis kami.
             </p>
           ) : null}
-          {event.hosts.map((host) => (
-            <div key={host.father} className="mt-8">
-              <p className="font-display text-sm tracking-[0.08em] text-[var(--ink)]">
-                {host.father}
-              </p>
-              <p className="font-script text-xl text-[var(--gold)]">&amp;</p>
-              <p className="font-display text-sm tracking-[0.08em] text-[var(--ink)]">
-                {host.mother}
-              </p>
+          {event.hosts.map((host, index) => (
+            <div key={host.father}>
+              {index > 0 ? (
+                <p className="mt-7 font-display text-[11px] tracking-[0.32em] text-[var(--gold)]">
+                  {event.copy.bersama}
+                </p>
+              ) : null}
+              <div className={index === 0 ? "mt-8" : "mt-4"}>
+                <p className="font-display text-sm tracking-[0.08em] text-[var(--ink)]">
+                  {host.father}
+                </p>
+                <p className="font-script text-xl text-[var(--gold)]">&amp;</p>
+                <p className="font-display text-sm tracking-[0.08em] text-[var(--ink)]">
+                  {host.mother}
+                </p>
+              </div>
             </div>
           ))}
           <p className="mt-8">{event.copy.inviteMs}</p>
@@ -142,6 +152,9 @@ export function InviteHome() {
               {event.coupleFull.bride}
               <br />
               {event.coupleFull.groom}
+            </p>
+            <p className="mt-6 font-display text-[11px] tracking-[0.22em] text-[var(--gold)]">
+              #{event.tagline}
             </p>
           </div>
         </Section>
