@@ -99,22 +99,6 @@ export function InviteHome() {
           </motion.div>
         </FloralFrame>
 
-        <motion.figure
-          variants={fade}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-          className="mx-auto mt-12 max-w-md"
-        >
-          <div className="editorial-frame">
-            <img
-              src={cldPhoto(LAYERS.bride2, "f_auto,q_auto,c_fill,g_auto,w_900,h_1200")}
-              alt="Asyikin dan Khalib"
-              className="aspect-[3/4] w-full object-cover"
-            />
-          </div>
-        </motion.figure>
-
         <Section title="Jemputan">
           <p>{event.copy.greeting}</p>
           {to ? (
@@ -159,21 +143,37 @@ export function InviteHome() {
           </div>
         </Section>
 
-        <motion.figure
+        <motion.section
           variants={fade}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          className="mx-auto mt-16 max-w-xs"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-16"
         >
-          <div className="film-strip">
-            <img
-              src={cldPhoto(LAYERS.bride3, "f_auto,q_auto,c_fill,g_auto,w_800,h_600")}
-              alt="Inai dan cincin"
-              className="aspect-[4/3] w-full object-cover"
-            />
+          <p className="section-title text-center">Kenangan</p>
+          <div className="section-ornament" />
+          <div className="photo-duet">
+            <figure className="photo-duet-main">
+              <img
+                src={cldPhoto(LAYERS.bride2, "f_auto,q_auto,c_fill,g_auto,w_900,h_1200")}
+                alt="Asyikin dan Khalib"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <figure className="photo-duet-inset">
+              <div className="film-strip">
+                <img
+                  src={cldPhoto(LAYERS.bride3, "f_auto,q_auto,c_fill,g_auto,w_800,h_600")}
+                  alt="Inai dan cincin"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+            </figure>
+            <p className="photo-duet-caption font-script">
+              {event.coupleShort.bride} &amp; {event.coupleShort.groom}
+            </p>
           </div>
-        </motion.figure>
+        </motion.section>
 
         <Section title="Atur cara">
           <p className="font-display tracking-[0.12em] text-[var(--gold)]">
