@@ -4,8 +4,9 @@ Digital wedding card: dark floral layers from Cloudinary, RSVP in Firestore, sta
 
 ## Pages
 
-- `/` — invitation, RSVP form, wishes. Optional guest name: `/?to=Ahmad`
-- `/kehadiran/` — public attendance list (no phone numbers)
+- `/` — invitation + RSVP form. Optional guest name: `/?to=Ahmad`
+- `/kehadiran/` — attendance list (open this URL directly; not linked from the kad)
+- `/ucapan/` — wishes form + list (open this URL directly; not linked from the kad)
 
 ## Local
 

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { listenAttendance, type Attendance } from "@/lib/rsvp";
 import { event } from "@/lib/content";
@@ -37,12 +36,6 @@ export function AttendanceBoard() {
       <h1 className="type-hero font-script mt-4 text-center text-5xl">
         {event.coupleShort.bride} &amp; {event.coupleShort.groom}
       </h1>
-      <Link
-        href="/"
-        className="mt-4 block text-center font-display text-[10px] tracking-[0.24em] text-[var(--ink)]/50"
-      >
-        ← Kembali ke kad
-      </Link>
 
       <div className="mt-10 grid grid-cols-3 gap-3 text-center">
         <Stat label="Hadir" value={stats.yes.length} />

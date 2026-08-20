@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -8,7 +7,6 @@ import { Cover } from "@/components/Cover";
 import { Countdown } from "@/components/Countdown";
 import { FloralFrame } from "@/components/FloralFrame";
 import { RsvpForm } from "@/components/RsvpForm";
-import { WishWall } from "@/components/WishWall";
 import { calendarUrl, event, telLink, waLink } from "@/lib/content";
 
 const fade = {
@@ -172,18 +170,6 @@ export function InviteHome() {
         <Section title="RSVP">
           <div className="surface rounded-2xl px-6 py-10">
             <RsvpForm />
-            <Link
-              href="/kehadiran"
-              className="mt-7 block text-center font-display text-[10px] tracking-[0.28em] text-[var(--gold)]"
-            >
-              LIHAT KEHADIRAN →
-            </Link>
-          </div>
-        </Section>
-
-        <Section title="Ucapan">
-          <div className="surface rounded-2xl px-6 py-10">
-            <WishWall />
           </div>
         </Section>
 

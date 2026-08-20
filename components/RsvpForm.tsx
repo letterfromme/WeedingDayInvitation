@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { submitRsvp } from "@/lib/rsvp";
 
@@ -56,12 +55,6 @@ export function RsvpForm() {
         <p className="mt-3 text-lg text-[var(--ink)]">
           RSVP anda telah direkodkan.
         </p>
-        <Link
-          href="/kehadiran"
-          className="mt-6 inline-block border border-[var(--gold)]/70 px-6 py-2 font-display text-[10px] tracking-[0.28em] text-[var(--gold)]"
-        >
-          LIHAT KEHADIRAN
-        </Link>
       </div>
     );
   }
