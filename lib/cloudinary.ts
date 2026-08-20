@@ -20,3 +20,7 @@ export function cld(publicId: string, extra = "f_auto,q_auto") {
 export function cldLayer(publicId: string) {
   return cld(publicId, "f_auto,q_auto,e_make_transparent:30,co_black");
 }
+
+export function cldBg(publicId: string) {
+  return cld(publicId, "f_auto,q_auto,e_brightness:35,e_saturation:-15");
+}

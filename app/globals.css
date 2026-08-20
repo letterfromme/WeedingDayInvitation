@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #c9a24a;
-  --gold-soft: #e8d5a3;
-  --rose: #9a3d56;
-  --rose-deep: #7a2d44;
-  --ink: #1a1216;
-  --cream: #f4eadc;
+  --ivory: #f7f1e8;
+  --blush: #fde8ee;
+  --ink: #3a2a28;
+  --burgundy: #6b2d3c;
+  --gold: #b8944a;
+  --gold-soft: #d4bc7e;
+  --surface: rgba(255, 252, 247, 0.88);
+  --rose: #6b2d3c;
+  --rose-deep: #6b2d3c;
+  --cream: #f7f1e8;
 }
 
 html {
@@ -14,8 +18,12 @@ html {
 }
 
 body {
-  background: var(--ink);
-  color: var(--cream);
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, var(--blush) 0%, transparent 55%),
+    var(--ivory);
+  color: var(--ink);
+  font-size: 17.5px;
+  line-height: 1.7;
 }
 
 .font-script {
@@ -32,38 +40,78 @@ body {
 
 .gold-line {
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.type-hero {
+  color: var(--burgundy);
+  -webkit-text-stroke: 0.35px rgba(184, 148, 74, 0.45);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 0 rgba(184, 148, 74, 0.22),
+    0 10px 28px rgba(90, 50, 40, 0.16);
+}
+
+.surface {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 148, 74, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 24px 60px rgba(80, 50, 40, 0.12);
 }
 
 .gold-frame {
-  box-shadow: inset 0 0 0 1px rgba(201, 162, 74, 0.7);
+  border-radius: 1.15rem;
+  box-shadow:
+    inset 0 0 0 1px rgba(184, 148, 74, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 28px 70px rgba(80, 50, 40, 0.16);
 }
 
 .field {
   width: 100%;
-  background: transparent;
-  border: 1px solid rgba(201, 162, 74, 0.28);
-  padding: 0.7rem 0.85rem;
-  color: var(--cream);
+  background: rgba(255, 252, 247, 0.9);
+  border: 1px solid rgba(184, 148, 74, 0.35);
+  padding: 0.75rem 0.9rem;
+  color: var(--ink);
   outline: none;
+}
+
+.field::placeholder {
+  color: rgba(58, 42, 40, 0.4);
 }
 
 .field:focus {
   border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184, 148, 74, 0.18);
 }
 
 .nav-btn {
-  border: 1px solid rgba(201, 162, 74, 0.7);
-  padding: 0.7rem 0.5rem;
+  border: 1px solid rgba(184, 148, 74, 0.7);
+  padding: 0.75rem 0.5rem;
   font-family: var(--font-display), serif;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
   text-align: center;
+  background: rgba(255, 252, 247, 0.7);
+  transition: box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(184, 148, 74, 0.12);
+  box-shadow: 0 0 24px rgba(184, 148, 74, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .glow-pulse,
+  .float-layer {
+    animation: none !important;
+  }
 }

@@ -36,12 +36,12 @@ export function Countdown() {
       {items.map((item) => (
         <div
           key={item.label}
-          className="border border-[var(--gold)]/25 px-2 py-4 text-center"
+          className="surface px-2 py-4 text-center"
         >
           <p className="font-display text-2xl text-[var(--gold)]">
             {now === null ? "—" : pad(item.value)}
           </p>
-          <p className="mt-1 font-display text-[9px] tracking-[0.2em] text-[var(--cream)]/60">
+          <p className="mt-1 font-display text-[9px] tracking-[0.2em] text-[var(--ink)]/55">
             {item.label}
           </p>
         </div>

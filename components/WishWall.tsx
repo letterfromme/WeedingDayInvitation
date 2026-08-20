@@ -73,7 +73,7 @@ export function WishWall() {
             <p className="font-display text-[11px] tracking-[0.18em] text-[var(--gold)]">
               {row.name}
             </p>
-            <p className="mt-1 text-[var(--cream)]/85">{row.message}</p>
+            <p className="mt-1 text-[var(--ink)]">{row.message}</p>
           </li>
         ))}
       </ul>

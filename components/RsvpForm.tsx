@@ -49,11 +49,11 @@ export function RsvpForm() {
 
   if (status === "done") {
     return (
-      <div className="border border-[var(--gold)]/30 px-6 py-10 text-center">
+      <div className="px-2 py-6 text-center">
         <p className="font-display text-[11px] tracking-[0.3em] text-[var(--gold)]">
           TERIMA KASIH
         </p>
-        <p className="mt-3 text-lg text-[var(--cream)]">
+        <p className="mt-3 text-lg text-[var(--ink)]">
           RSVP anda telah direkodkan.
         </p>
         <Link
@@ -167,8 +167,8 @@ function Choice({
       onClick={onClick}
       className={`border py-2 font-display text-[10px] tracking-[0.2em] ${
         active
-          ? "border-[var(--gold)] bg-[var(--gold)]/15 text-[var(--gold)]"
-          : "border-white/15 text-[var(--cream)]/70"
+          ? "border-[var(--gold)] bg-[var(--gold)]/12 text-[var(--gold)]"
+          : "border-[var(--gold)]/30 text-[var(--ink)]/70"
       }`}
     >
       {children}
