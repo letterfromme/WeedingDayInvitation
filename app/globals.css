@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #c9a24a;
+  --gold-soft: #e8d5a3;
+  --rose: #9a3d56;
+  --rose-deep: #7a2d44;
+  --ink: #1a1216;
+  --cream: #f4eadc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+.gold-frame {
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 74, 0.7);
+}
+
+.field {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(201, 162, 74, 0.28);
+  padding: 0.7rem 0.85rem;
+  color: var(--cream);
+  outline: none;
+}
+
+.field:focus {
+  border-color: var(--gold);
+}
+
+.nav-btn {
+  border: 1px solid rgba(201, 162, 74, 0.7);
+  padding: 0.7rem 0.5rem;
+  font-family: var(--font-display), serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+}
