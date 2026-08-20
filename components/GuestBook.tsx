@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { listenAttendance, type Attendance } from "@/lib/rsvp";
 import { event } from "@/lib/content";
-import { WishWall } from "@/components/WishWall";
+import { WishList } from "@/components/WishWall";
 
 export function GuestBook() {
   const [rows, setRows] = useState<Attendance[] | null>(null);
@@ -106,11 +106,8 @@ export function GuestBook() {
           UCAPAN
         </p>
         <div className="gold-line mx-auto my-4 w-20" />
-        <p className="mb-6 text-center text-sm text-[var(--ink)]/60">
-          Tinggalkan ucapan untuk pengantin.
-        </p>
         <div className="surface rounded-2xl px-6 py-10">
-          <WishWall />
+          <WishList />
         </div>
       </section>
     </main>

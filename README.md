@@ -4,8 +4,8 @@ Digital wedding card: dark floral layers from Cloudinary, RSVP in Firestore, sta
 
 ## Pages
 
-- `/` — invitation + RSVP form. Optional guest name: `/?to=Ahmad`
-- `/kehadiran/` — RSVP list and ucapan together (open this URL directly; not linked from the kad)
+- `/` — invitation, RSVP form, and ucapan form. Optional guest name: `/?to=Ahmad`
+- `/kehadiran/` — submitted RSVP list and ucapan list (one private URL; not linked from the kad)
 
 ## Local
 

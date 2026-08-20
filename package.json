@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "upload:cloudinary": "node --env-file=.env.local scripts/upload-cloudinary.mjs"
+    "upload:cloudinary": "node --env-file=.env.local scripts/upload-cloudinary.mjs",
+    "upload:media": "node --env-file=.env.local scripts/upload-media.mjs"
   },
   "dependencies": {
     "firebase": "^12.6.0",

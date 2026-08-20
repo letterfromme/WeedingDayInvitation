@@ -32,16 +32,13 @@ export function Countdown() {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-3">
+    <div className="grid grid-cols-4 gap-2">
       {items.map((item) => (
-        <div
-          key={item.label}
-          className="surface px-2 py-4 text-center"
-        >
-          <p className="font-display text-2xl text-[var(--gold)]">
+        <div key={item.label} className="px-1 py-2 text-center">
+          <p className="font-display text-[2.15rem] leading-none text-[var(--burgundy)]">
             {now === null ? "—" : pad(item.value)}
           </p>
-          <p className="mt-1 font-display text-[9px] tracking-[0.2em] text-[var(--ink)]/55">
+          <p className="mt-2 font-display text-[8px] tracking-[0.22em] text-[var(--ink)]/45">
             {item.label}
           </p>
         </div>

@@ -22,7 +22,7 @@ const script = Great_Vibes({
 });
 
 const title = `Majlis Perkahwinan ${event.coupleShort.bride} & ${event.coupleShort.groom}`;
-const description = `${event.date.displayMs} · ${event.venue.name} · Walimatulurus`;
+const description = `${event.date.displayMs} · ${event.venue.name} · Majlis Perkahwinan`;
 
 export const metadata: Metadata = {
   title,

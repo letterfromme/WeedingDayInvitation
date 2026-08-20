@@ -11,6 +11,10 @@ export const LAYERS = {
   flowerBc: "weeding-card/flower-bc",
   flowerBb: "weeding-card/flower-bb",
   flowerBr: "weeding-card/flower-br",
+  bride1: "weeding-card/bride-1",
+  bride2: "weeding-card/bride-2",
+  bride3: "weeding-card/bride-3",
+  song: "weeding-card/song",
 } as const;
 
 export function cld(publicId: string, extra = "f_auto,q_auto") {
@@ -22,5 +26,13 @@ export function cldLayer(publicId: string) {
 }
 
 export function cldBg(publicId: string) {
-  return cld(publicId, "f_auto,q_auto,e_brightness:35,e_saturation:-15");
+  return cld(publicId, "f_auto,q_auto,e_brightness:20,e_saturation:-8");
+}
+
+export function cldPhoto(publicId: string, extra = "f_auto,q_auto,c_fill,g_auto") {
+  return cld(publicId, extra);
+}
+
+export function cldAudio(publicId: string) {
+  return `https://res.cloudinary.com/${CLOUD}/video/upload/${publicId}`;
 }

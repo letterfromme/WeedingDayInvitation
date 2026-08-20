@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Petals } from "@/components/Petals";
 import { cldBg, cldLayer, LAYERS } from "@/lib/cloudinary";
 
 const overlays: { id: string; x: number; y: number; delay: number; duration: number }[] = [
@@ -105,7 +106,9 @@ export function FloralFrame({
             }
           />
 
-          <div className="absolute inset-x-[16%] inset-y-[18%] z-[3] flex items-center justify-center text-center">
+          <Petals />
+
+          <div className="absolute inset-x-[14%] inset-y-[16%] z-[3] flex items-center justify-center text-center">
             {children}
           </div>
         </div>

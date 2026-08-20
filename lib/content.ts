@@ -1,12 +1,12 @@
 export const event = {
+  title: "MAJLIS PERKHAWINAN",
   coupleShort: { bride: "Asyikin", groom: "Khalib" },
   coupleFull: {
-    bride: "Che Zamiera Asyikin binti Che Zaazany",
-    groom: "Ahmad Khalib bin Ahmad Zakarno",
+    bride: "CHE ZAMIERA ASYIKIN BIN CHE ZAAZANY",
+    groom: "AHMAD KHALIB BIN AHMAD ZAKARNO",
   },
   hosts: [
-    { father: "Che Zaazany bin Che Yahya", mother: "Suriati binti Che Su" },
-    { father: "Che Husain b. Musa (Wok)", mother: "Mekdah binti Ibrahim" },
+    { father: "CHE ZAAZANY BIN CHE YAHYA", mother: "SURIATI BINTI CHE SU" },
   ],
   date: {
     iso: "2026-10-17",
@@ -19,22 +19,23 @@ export const event = {
     day: "17",
   },
   time: {
-    reception: "12.00 PM – 5.00 PM",
-    arrival: "12.00 PM",
+    reception: "12 tengahari – 5 petang",
+    arrival: "12 tengahari",
     startHour: 12,
     endHour: 17,
   },
   venue: {
-    name: "Kg Bukit Abal",
-    address: "Kampung Bukit Abal",
-    maps: "https://www.google.com/maps/search/?api=1&query=Kampung+Bukit+Abal",
-    waze: "https://waze.com/ul?q=Kampung%20Bukit%20Abal&navigate=yes",
+    name: "Kampung Bukit Abal",
+    address: "KAMPUNG BUKIT ABAL, 16800 PASIR PUTEH, KELANTAN",
+    lat: 5.866169,
+    lng: 102.337044,
+    maps: "https://maps.google.com/?q=5.866169,102.337044",
+    waze: "https://waze.com/ul?ll=5.866169%2C102.337044&navigate=yes",
   },
   contacts: [
+    { name: "Wok Husain", phone: "60103313583" },
     { name: "Aza", phone: "60199079894" },
-    { name: "Wok", phone: "60103313583" },
     { name: "Yati", phone: "60139468506" },
-    { name: "Syikin", phone: "601123443035" },
   ],
   copy: {
     greeting: "Assalamualaikum & salam sejahtera",
@@ -47,11 +48,19 @@ export const event = {
   },
 } as const;
 
+export function kepadaLine(name: string) {
+  return `Kepada ${name}, dengan penuh kasih`;
+}
+
+export function qrUrl(data: string, size = 180) {
+  return `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(data)}`;
+}
+
 export function calendarUrl() {
   const start = "20261017T040000Z";
   const end = "20261017T090000Z";
   const text = encodeURIComponent(
-    `Walimatulurus ${event.coupleShort.bride} & ${event.coupleShort.groom}`,
+    `Majlis Perkahwinan ${event.coupleShort.bride} & ${event.coupleShort.groom}`,
   );
   const location = encodeURIComponent(event.venue.address);
   const details = encodeURIComponent(
