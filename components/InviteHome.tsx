@@ -36,33 +36,30 @@ export function InviteHome() {
             animate={open ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
-            <p className="font-display text-[11px] tracking-[0.45em] text-[var(--gold)]">
+            <p className="font-display text-[10px] tracking-[0.45em] text-[var(--gold)]">
               SAVE THE DATE
             </p>
-            <h1 className="type-hero font-script mt-6 text-[3.5rem] leading-[0.92]">
+            <h1 className="type-hero font-script mt-4 text-[2.65rem] leading-[0.95] sm:text-[3rem]">
               {event.coupleShort.bride}
             </h1>
-            <p className="font-script my-2 text-3xl text-[var(--gold)]">&amp;</p>
-            <h1 className="type-hero font-script text-[3.5rem] leading-[0.92]">
+            <p className="font-script my-1 text-2xl text-[var(--gold)]">&amp;</p>
+            <h1 className="type-hero font-script text-[2.65rem] leading-[0.95] sm:text-[3rem]">
               {event.coupleShort.groom}
             </h1>
-            <p className="mx-auto mt-6 max-w-[17rem] text-[0.95rem] leading-relaxed text-[var(--ink)]">
-              We want to share happiness with our loved ones. Come and celebrate our wedding.
-            </p>
-            <div className="mx-auto mt-8 w-full max-w-[16rem]">
-              <div className="gold-line mb-4" />
-              <p className="font-display text-[11px] tracking-[0.35em] text-[var(--gold)]">
+            <div className="mx-auto mt-5 w-full max-w-[14.5rem]">
+              <div className="gold-line mb-3" />
+              <p className="font-display text-[10px] tracking-[0.35em] text-[var(--gold)]">
                 {event.date.monthEn}
               </p>
-              <div className="mt-3 flex items-center justify-center gap-3 font-display text-[11px] tracking-[0.12em] text-[var(--ink)]">
+              <div className="mt-2 flex items-center justify-center gap-2.5 font-display text-[9px] tracking-[0.12em] text-[var(--ink)]">
                 <span>{event.date.weekdayEn}</span>
-                <span className="text-5xl font-semibold tracking-normal text-[var(--burgundy)]">
+                <span className="text-4xl font-semibold tracking-normal text-[var(--burgundy)]">
                   {event.date.day}
                 </span>
                 <span>AT 12 PM</span>
               </div>
-              <div className="gold-line mt-4" />
-              <p className="mt-5 font-display text-[10px] tracking-[0.22em] text-[var(--ink)]/75">
+              <div className="gold-line mt-3" />
+              <p className="mt-3 font-display text-[9px] tracking-[0.2em] text-[var(--ink)]/80">
                 {event.venue.address.toUpperCase()}
               </p>
             </div>

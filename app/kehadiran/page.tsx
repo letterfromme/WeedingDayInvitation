@@ -1,5 +1,5 @@
-import { AttendanceBoard } from "@/components/AttendanceBoard";
+import { GuestBook } from "@/components/GuestBook";
 
 export default function KehadiranPage() {
-  return <AttendanceBoard />;
+  return <GuestBook />;
 }
