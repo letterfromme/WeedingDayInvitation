@@ -165,6 +165,22 @@ body {
   animation: seal-glow 5.6s ease-in-out infinite;
 }
 
+.site-credit {
+  margin-top: 3.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-family: var(--font-display), serif;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(58, 42, 40, 0.38);
+}
+
+.site-credit span {
+  letter-spacing: 0.16em;
+  color: rgba(184, 148, 74, 0.75);
+}
+
 .editorial-frame {
   overflow: hidden;
   border-radius: 0.35rem;

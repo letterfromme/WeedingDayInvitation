@@ -8,6 +8,7 @@ import {
 } from "@/lib/rsvp";
 import { event, telLink, waLink } from "@/lib/content";
 import { WishList } from "@/components/WishWall";
+import { SiteCredit } from "@/components/SiteCredit";
 
 export function GuestBook() {
   const [rows, setRows] = useState<Attendance[] | null>(null);
@@ -112,6 +113,7 @@ export function GuestBook() {
           <WishList />
         </div>
       </section>
+      <SiteCredit />
     </main>
   );
 }

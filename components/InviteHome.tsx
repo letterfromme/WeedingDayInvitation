@@ -9,6 +9,7 @@ import { FloralFrame } from "@/components/FloralFrame";
 import { GoldFlourish } from "@/components/GoldFlourish";
 import { RsvpForm } from "@/components/RsvpForm";
 import { WishForm } from "@/components/WishWall";
+import { SiteCredit } from "@/components/SiteCredit";
 import { cldAudio, cldPhoto, LAYERS } from "@/lib/cloudinary";
 import { calendarUrl, event, qrUrl, telLink, waLink } from "@/lib/content";
 
@@ -250,6 +251,7 @@ export function InviteHome() {
         <p className="mt-16 text-center text-sm text-[var(--ink)]/65">
           {event.copy.closingMs}
         </p>
+        <SiteCredit />
       </main>
     </>
   );
